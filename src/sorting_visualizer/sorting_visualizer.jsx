@@ -21,11 +21,15 @@ class SortingVisualizer extends React.Component {
     resetArray() {
         const array = [];
 
-        for (let i = 0; i < 310; i++) {
-            array.push(randomInteger(5, 730));
+        for (let i = 0; i < 320; i++) {
+            array.push(randomInteger(5, 600));
         };
 
         this.setState({ array });
+    }
+
+    mergeSort() {
+
     }
 
     render() {
@@ -42,6 +46,8 @@ class SortingVisualizer extends React.Component {
                         {/* {value} */}
                     </div>
                 ))}
+                <button onClick={() => this.resetArray()}>Generate New Array</button>
+                {/* <button onClick={() => this.mergeSort()}>Merge Sort</button> */}
             </div>
         )
     }
